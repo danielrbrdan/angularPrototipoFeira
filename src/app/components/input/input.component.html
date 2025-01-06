@@ -1,0 +1,11 @@
+<label for="inputField-{{label}}" *ngIf="label">{{ label }}</label>
+<input
+  id="inputField-{{label}}"
+  class="form-control"
+  [type]="type"
+  [placeholder]="placeholder"
+  [(ngModel)]="value"
+  [disabled]="disabled"
+  [required]="required"
+  (input)="onInputChange($event)"
+/>

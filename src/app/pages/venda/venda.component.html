@@ -1,0 +1,11 @@
+<app-button (onClick)="moveToCreatePage()">Adicionar</app-button>
+
+<app-table [data]="rows">
+  <app-column [field]="'id'"> </app-column>
+  <app-column [field]="'name'"> </app-column>
+  <app-column [field]="'editar'">
+    <ng-template #actionsTemplate let-row>
+      <button class="btn btn-primary" (click)="deleteById(row.id)">Deletar</button>
+    </ng-template>
+  </app-column>
+</app-table>

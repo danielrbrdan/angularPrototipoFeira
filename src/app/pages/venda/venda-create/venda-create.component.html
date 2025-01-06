@@ -1,0 +1,10 @@
+<app-button (onClick)="moveToPreviousPage()">Voltar</app-button>
+<app-button (onClick)="createOrUpdate()">{{
+  this.idEdit ? "Atualizar" : "Adicionar"
+}}</app-button>
+
+<form [formGroup]="form">
+  <app-input label="produto" formControlName="produto" />
+  <app-input label="loja" formControlName="loja" />
+  <app-input label="quantidadeVendida" formControlName="quantidadeVendida" />
+</form>

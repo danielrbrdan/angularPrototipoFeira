@@ -1,0 +1,18 @@
+<app-button (onClick)="moveToPreviousPage()">Voltar</app-button>
+
+<div *ngIf="this.idEdit">
+  <qrcode
+    [qrdata]="'product_' + this.idEdit"
+    [width]="200"
+    [errorCorrectionLevel]="'M'"
+  ></qrcode>
+</div>
+
+<form [formGroup]="form">
+  <app-input label="name" formControlName="name" />
+  <app-input label="Quantidade" formControlName="quantity" type="number" />
+</form>
+
+<app-button (onClick)="createOrUpdate()">{{
+  this.idEdit ? "Atualizar" : "Adicionar"
+}}</app-button>

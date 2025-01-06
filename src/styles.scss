@@ -1,0 +1,7 @@
+@use 'bootstrap/scss/bootstrap' as *;
+
+$default-primary-color: #1c2331;
+
+.bg-primary {
+  background-color: $default-primary-color !important; 
+}
